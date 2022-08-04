@@ -16,7 +16,7 @@ from PIL import ImageColor, Image
 
 
 ###connection to mongo db
-MONGO_URL = 'mongodb+srv://ESdataAdmin:Canyon321@cluster0.xmf8h.mongodb.net/smdata?authSource=admin&replicaSet=atlas-2b1n1h-shard-0'
+MONGO_URL = #####hidden for security
 ca = certifi.where()
 client = MongoClient(MONGO_URL, connect=False, tlsCAFile=ca)
 db = client['smdata']
@@ -24,7 +24,7 @@ db = client['smdata']
 
 def connect_to_db():
     #as a function
-    MONGO_URL = 'mongodb+srv://ESdataAdmin:Canyon321@cluster0.xmf8h.mongodb.net/smdata?authSource=admin&replicaSet=atlas-2b1n1h-shard-0'
+    MONGO_URL = #hidden for security
     ca = certifi.where()
     # New Authenticated Users
     client = MongoClient(MONGO_URL, connect=False, tlsCAFile=ca)
