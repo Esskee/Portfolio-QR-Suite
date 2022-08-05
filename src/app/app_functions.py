@@ -16,7 +16,7 @@ from PIL import ImageColor, Image
 
 
 ###connection to mongo db
-MONGO_URL = #####hidden for security
+MONGO_URL = 'Placeholder'  # hidden for security
 ca = certifi.where()
 client = MongoClient(MONGO_URL, connect=False, tlsCAFile=ca)
 db = client['smdata']
@@ -24,7 +24,7 @@ db = client['smdata']
 
 def connect_to_db():
     #as a function
-    MONGO_URL = #hidden for security
+    MONGO_URL = 'Placeholder'  # hidden for security
     ca = certifi.where()
     # New Authenticated Users
     client = MongoClient(MONGO_URL, connect=False, tlsCAFile=ca)
@@ -671,7 +671,7 @@ class Media_Upload_To_AWS():
             raise ValueError(f'{path_type} is not valid')
 
     def file_handler(self, file, filename, path_type):
-        s3 = boto3.client('s3', aws_access_key_id='AKIAR26M65JFFX2ODGML', aws_secret_access_key='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')
+        s3 = boto3.client('s3')
         #really ugly string formatting to grab file type and bytestring
         content_type, content_string = file.split(',')
         content_type, _ = content_type.split(';')
